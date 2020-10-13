@@ -1,0 +1,122 @@
+html {
+    box-sizing: border-box;
+    /*paso 1 para mantener el color fijo*/
+    height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    /*paso 2 para mantener el color fijo*/
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3e26c1+0,1e4ebf+52,6378b7+100 */
+    background: #3e26c1;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #3e26c1 0%, #1e4ebf 52%, #6378b7 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #3e26c1 0%, #1e4ebf 52%, #6378b7 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #3e26c1 0%, #1e4ebf 52%, #6378b7 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#3e26c1', endColorstr='#6378b7', GradientType=0);
+    /* IE6-9 */
+    /*paso 3 para mantener el color fijo*/
+    background-attachment: fixed;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    margin-bottom: 40px
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.lista-productos {
+    padding: 0;
+    list-style: none;
+}
+
+.lista-productos li {
+    float: left;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/*selecciona el elemento y ejecuta la regla*/
+
+.lista-productos li:nth-child(2n+1) {
+    /*limpia el float*/
+    clear: both;
+}
+
+@media (min-width: 768px) {
+    .lista-productos li {
+        width: 33.3%;
+    }
+    .lista-productos li:nth-child(2n+1) {
+        clear: unset;
+    }
+    .lista-productos li:nth-child(3n+1) {
+        clear: both;
+    }
+}
+
+.lista-productos li img {
+    border: 10px solid rgba(128, 1, 145, .45);
+    transition: border-color .3s ease-in-out;
+}
+
+.lista-productos li img:hover {
+    border: 10px solid rgba(128, 1, 145, 1);
+}
+
+.lista-productos li p {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+}
+
+span.precio {
+    color: #ffce00;
+    font-size: 40px;
+}
+
+.boton {
+    background-color: #ffce00;
+    padding: 10px 40px;
+    margin-top: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    color: #8001c3;
+    transition: background-color .3s ease-in-out;
+}
+
+.boton:hover {
+    background-color: #ebbc00;
+}
